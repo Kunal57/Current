@@ -1,4 +1,4 @@
-module TwitterHelper
+module ApiHelper
   def twitter
     twitter_api = Twitter::REST::Client.new do |config|
 
@@ -7,5 +7,9 @@ module TwitterHelper
       config.access_token        = Rails.application.secrets.TWITTER_ACCESS_TOKEN
       config.access_token_secret = Rails.application.secrets.TWITTER_TOKEN_SECRET
     end
+  end
+
+  def bing
+  	BingSearch.account_key = Rails.application.secrets.BING_API_KEY
   end
 end
