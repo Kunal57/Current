@@ -3,6 +3,7 @@
 }
 
 .content {
+  font-size: 80%;
   text-align: center;
   border-style: solid;
   border-radius: 20%;
@@ -10,12 +11,10 @@
   float: left;
   width: 200px;
   height: 200px;
-/*  padding-left: 10%;
-  padding-right: 10%;*/
 }
 
 #grid {
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
