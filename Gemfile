@@ -35,7 +35,6 @@ gem 'jbuilder', '~> 2.5'
 # bing-search to generate Articles
 gem 'bing-search'
 
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
