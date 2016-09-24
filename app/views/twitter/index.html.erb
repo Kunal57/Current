@@ -1,16 +1,61 @@
- <%# @trends_array.each do |trend|%>
-  <%# trend %>
- <!--  <br> -->
- <%# end %>
-
 <div id="grid">
-   <div class="content" id="1"><%= @trends_array[0] %></div>
-   <div class="content" id="2"><%= @trends_array[1] %></div>
-   <div class="content" id="3"><%= @trends_array[2] %></div>
-   <div class="content" id="4"><%= @trends_array[3] %></div>
-   <div class="content" id="5"><%= @trends_array[4] %></div>
-   <div class="content" id="6"><%= @trends_array[5] %></div>
-   <div class="content" id="7"><%= @trends_array[6] %></div>
-   <div class="content" id="8"><%= @trends_array[7] %></div>
-   <div class="content" id="9"><%= @trends_array[8] %></div>
+
 </div>
+
+<script type="text/babel">
+   var Tile = React.createClass({
+      render: function(){
+         return(
+         <div className="content">
+            <h1>{this.props.trend}</h1>
+            <img>{this.props.picture}</img>
+         </div>)
+         ;
+      }
+   });
+   ReactDOM.render(<div>
+                     <Tile  trend="<%= @trends_array[0] %>"/>
+                     <Tile  trend="<%= @trends_array[1] %>"/>
+                     <Tile  trend="<%= @trends_array[2] %>"/>
+                     <Tile  trend="<%= @trends_array[3] %>"/>
+                     <Tile  trend="<%= @trends_array[4] %>"/>
+                     <Tile  trend="<%= @trends_array[5] %>"/>
+                     <Tile  trend="<%= @trends_array[6] %>"/>
+                     <Tile  trend="<%= @trends_array[7] %>"/>
+                     <Tile  trend="<%= @trends_array[8] %>"/>
+                     <Tile  trend="<%= @trends_array[9] %>"/>
+                     <Tile  trend="<%= @trends_array[10] %>"/>
+                     <Tile  trend="<%= @trends_array[11] %>"/>
+                     <Tile  trend="<%= @trends_array[12] %>"/>
+                     <Tile  trend="<%= @trends_array[13] %>"/>
+                     <Tile  trend="<%= @trends_array[14] %>"/>
+                     <Tile  trend="<%= @trends_array[15] %>"/>
+                     <Tile  trend="<%= @trends_array[16] %>"/>
+                     <Tile  trend="<%= @trends_array[17] %>"/>
+                     <Tile  trend="<%= @trends_array[18] %>"/>
+                     <Tile  trend="<%= @trends_array[19] %>"/>
+                     <Tile  trend="<%= @trends_array[20] %>"/>
+                     <Tile  trend="<%= @trends_array[21] %>"/>
+                     <Tile  trend="<%= @trends_array[22] %>"/>
+                     <Tile  trend="<%= @trends_array[23] %>"/>
+                     <Tile  trend="<%= @trends_array[24] %>"/>
+                     <Tile  trend="<%= @trends_array[25] %>"/>
+                     <Tile  trend="<%= @trends_array[26] %>"/>
+                     <Tile  trend="<%= @trends_array[27] %>"/>
+                     <Tile  trend="<%= @trends_array[28] %>"/>
+                     <Tile  trend="<%= @trends_array[29] %>"/>
+                     <Tile  trend="<%= @trends_array[30] %>"/>
+                     <Tile  trend="<%= @trends_array[31] %>"/>
+                     <Tile  trend="<%= @trends_array[32] %>"/>
+                     <Tile  trend="<%= @trends_array[33] %>"/>
+                     <Tile  trend="<%= @trends_array[34] %>"/>
+                     <Tile  trend="<%= @trends_array[35] %>"/>
+                     <Tile  trend="<%= @trends_array[36] %>"/>
+                     <Tile  trend="<%= @trends_array[37] %>"/>
+                     <Tile  trend="<%= @trends_array[38] %>"/>
+                     <Tile  trend="<%= @trends_array[39] %>"/>
+                     <Tile  trend="<%= @trends_array[40] %>"/>
+                     <Tile  trend="<%= @trends_array[41] %>"/>
+                   </div>, document.getElementById('grid'))
+</script>
+

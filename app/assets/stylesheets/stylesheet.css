@@ -1,9 +1,5 @@
-#title {
-  text-align: center;
-}
-
 .content {
-  font-size: 80%;
+  font-size: 50%;
   text-align: center;
   border-style: solid;
   border-radius: 20%;
@@ -13,8 +9,19 @@
   height: 200px;
 }
 
-#grid {
+#container {
   width: 100%;
+  
+}
+
+#title {
+  text-align: center;
+}
+
+#grid {
+  width: 90%;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 20%;
 }
+
