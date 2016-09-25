@@ -1,16 +1,60 @@
- <%# @trends_array.each do |trend|%>
-  <%# trend %>
- <!--  <br> -->
- <%# end %>
-
 <div id="grid">
-   <div class="content" id="1"><%= @trends_array[0] %><img src="<%= @images_array[0] %>"></div>
-   <div class="content" id="2"><%= @trends_array[1] %><img src="<%= @images_array[1] %>"></div>
-   <div class="content" id="3"><%= @trends_array[2] %><img src="<%= @images_array[2] %>"></div>
-   <div class="content" id="4"><%= @trends_array[3] %><img src="<%= @images_array[3] %>"></div>
-   <div class="content" id="5"><%= @trends_array[4] %><img src="<%= @images_array[4] %>"></div>
-   <div class="content" id="6"><%= @trends_array[5] %><img src="<%= @images_array[5] %>"></div>
-   <div class="content" id="7"><%= @trends_array[6] %><img src="<%= @images_array[6] %>"></div>
-   <div class="content" id="8"><%= @trends_array[7] %><img src="<%= @images_array[7] %>"></div>
-   <div class="content" id="9"><%= @trends_array[8] %><img src="<%= @images_array[8] %>"></div>
+
 </div>
+
+<script type="text/babel">
+   var Tile = React.createClass({
+      render: function(){
+         return(
+         <div className="content">
+            <h1>{this.props.trend}</h1>
+            <img src={this.props.picture} />
+         </div>)
+         ;
+      }
+   });
+   ReactDOM.render(<div>
+                      <Tile  trend="<%= @trends_array[0] %>" picture="<%= @images_array[0] %>"/>
+                      <Tile  trend="<%= @trends_array[1] %>" picture="<%= @images_array[1] %>"/>
+                      <Tile  trend="<%= @trends_array[2] %>" picture="<%= @images_array[2] %>"/>
+                      <Tile  trend="<%= @trends_array[3] %>" picture="<%= @images_array[3] %>"/>
+                      <Tile  trend="<%= @trends_array[4] %>" picture="<%= @images_array[4] %>"/>
+                      <Tile  trend="<%= @trends_array[5] %>" picture="<%= @images_array[5] %>"/>
+                      <Tile  trend="<%= @trends_array[6] %>" picture="<%= @images_array[6] %>"/>
+                      <Tile  trend="<%= @trends_array[7] %>" picture="<%= @images_array[7] %>"/>
+                      <Tile  trend="<%= @trends_array[8] %>" picture="<%= @images_array[8] %>"/>
+                      <Tile  trend="<%= @trends_array[9] %>" picture="<%= @images_array[9] %>"/>
+                      <Tile  trend="<%= @trends_array[10] %>" picture="<%= @images_array[10] %>"/>
+                      <Tile  trend="<%= @trends_array[11] %>" picture="<%= @images_array[11] %>"/>
+                      <Tile  trend="<%= @trends_array[12] %>" picture="<%= @images_array[12] %>"/>
+                      <Tile  trend="<%= @trends_array[13] %>" picture="<%= @images_array[13] %>"/>
+                      <Tile  trend="<%= @trends_array[14] %>" picture="<%= @images_array[14] %>"/>
+                      <Tile  trend="<%= @trends_array[15] %>" picture="<%= @images_array[15] %>"/>
+                      <Tile  trend="<%= @trends_array[16] %>" picture="<%= @images_array[16] %>"/>
+                      <Tile  trend="<%= @trends_array[17] %>" picture="<%= @images_array[17] %>"/>
+                      <Tile  trend="<%= @trends_array[18] %>" picture="<%= @images_array[18] %>"/>
+                      <Tile  trend="<%= @trends_array[19] %>" picture="<%= @images_array[19] %>"/>
+                      <Tile  trend="<%= @trends_array[20] %>" picture="<%= @images_array[20] %>"/>
+                      <Tile  trend="<%= @trends_array[21] %>" picture="<%= @images_array[21] %>"/>
+                      <Tile  trend="<%= @trends_array[22] %>" picture="<%= @images_array[22] %>"/>
+                      <Tile  trend="<%= @trends_array[23] %>" picture="<%= @images_array[23] %>"/>
+                      <Tile  trend="<%= @trends_array[24] %>" picture="<%= @images_array[24] %>"/>
+                      <Tile  trend="<%= @trends_array[25] %>" picture="<%= @images_array[25] %>"/>
+                      <Tile  trend="<%= @trends_array[26] %>" picture="<%= @images_array[26] %>"/>
+                      <Tile  trend="<%= @trends_array[27] %>" picture="<%= @images_array[27] %>"/>
+                      <Tile  trend="<%= @trends_array[28] %>" picture="<%= @images_array[28] %>"/>
+                      <Tile  trend="<%= @trends_array[29] %>" picture="<%= @images_array[29] %>"/>
+                      <Tile  trend="<%= @trends_array[30] %>" picture="<%= @images_array[30] %>"/>
+                      <Tile  trend="<%= @trends_array[31] %>" picture="<%= @images_array[31] %>"/>
+                      <Tile  trend="<%= @trends_array[32] %>" picture="<%= @images_array[32] %>"/>
+                      <Tile  trend="<%= @trends_array[33] %>" picture="<%= @images_array[33] %>"/>
+                      <Tile  trend="<%= @trends_array[34] %>" picture="<%= @images_array[34] %>"/>
+                      <Tile  trend="<%= @trends_array[35] %>" picture="<%= @images_array[35] %>"/>
+                      <Tile  trend="<%= @trends_array[36] %>" picture="<%= @images_array[36] %>"/>
+                      <Tile  trend="<%= @trends_array[37] %>" picture="<%= @images_array[37] %>"/>
+                      <Tile  trend="<%= @trends_array[38] %>" picture="<%= @images_array[38] %>"/>
+                      <Tile  trend="<%= @trends_array[39] %>" picture="<%= @images_array[39] %>"/>
+                      <Tile  trend="<%= @trends_array[40] %>" picture="<%= @images_array[40] %>"/>
+                      <Tile  trend="<%= @trends_array[41] %>" picture="<%= @images_array[41] %>"/>
+                   </div>, document.getElementById('grid'))
+</script>
