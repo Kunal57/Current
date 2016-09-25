@@ -44,6 +44,9 @@ gem 'react-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  # dotevv gem to store ENV variables on development environment
+  gem 'dotenv-rails'
 end
 
 group :development do
