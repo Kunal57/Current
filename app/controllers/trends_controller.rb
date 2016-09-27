@@ -2,6 +2,7 @@ class TrendsController < ApplicationController
   include ApiHelper
 
   def index
+    @trends = Trend.order('created_at DESC').limit(50).reverse
     # @trends_array = []
     # twitter.trends(id = 23424977, options = {}).each{|trend| @trends_array<<trend.name}
 
@@ -11,8 +12,6 @@ class TrendsController < ApplicationController
     #   result = BingSearch.image(@trends_array[0])
     #   puts "____________________________"
     #   puts result[0].to_json
-
-    @trends = Trend.order('created_at DESC').limit(50).reverse
   end
 
   def show
