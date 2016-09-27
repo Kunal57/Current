@@ -29,3 +29,9 @@
   height: 160px;
   width: 160px;
 }
+
+#embedded_tweet {
+ display: block;
+ margin: auto;
+ width: 40%;
+}

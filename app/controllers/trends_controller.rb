@@ -7,6 +7,7 @@ class TrendsController < ApplicationController
 
   def show
     @trend = Trend.find(params[:id])
+    @tweets_array = @trend.tweets
   end
 
   def api
@@ -48,9 +49,9 @@ class TrendsController < ApplicationController
             end
           end
 
-          top_tweets = twitter.search(trend, options = {:result_type => "popular", :count => 5})
+          top_tweets = twitter.search(trend, options = {:result_type => "popular"})
           top_tweets.each do |tweet|
-            Tweet.create(tweet: tweet.text, trend_id: trend_object.id)
+            Tweet.create(tweet: tweet.id, trend_id: trend_object.id)
           end
       counter += 1
     end

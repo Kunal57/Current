@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 	root 'trends#index'
 
  	get 'trends/api'
+ 	get '/trends/:id' => 'trends#show'
 end
