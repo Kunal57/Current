@@ -2,9 +2,6 @@
 <html>
   <head>
     <title>Current</title>
-    <% if content_for?(:index) %>
-      <%= yield(:index) %>
-    <% end %>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
