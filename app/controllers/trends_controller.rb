@@ -52,8 +52,6 @@ class TrendsController < ApplicationController
           top_tweets.each do |tweet|
             Tweet.create(tweet: tweet.text, trend_id: trend_object.id)
           end
-
-
       counter += 1
     end
   end
