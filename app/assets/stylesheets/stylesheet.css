@@ -1,3 +1,23 @@
+#container {
+  width: 100%;
+}
+
+#tile-container {
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20%;
+}
+
+#title {
+  text-align: center;
+}
+
+.tile-image {
+  height: 160px;
+  width: 160px;
+}
+
 .content {
   font-size: 50%;
   text-align: center;
@@ -7,31 +27,4 @@
   float: left;
   width: 200px;
   height: 200px;
-}
-
-#container {
-  width: 100%;
-
-}
-
-#title {
-  text-align: center;
-}
-
-#grid {
-  width: 90%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 20%;
-}
-
-.tile-image {
-  height: 160px;
-  width: 160px;
-}
-
-#embedded_tweet {
- display: block;
- margin: auto;
- width: 40%;
 }

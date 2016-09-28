@@ -1,21 +1,26 @@
-<div id="grid">
+<button class="shuffle-button" type="button">Shuffle</button>
+
+
+<div id="reactContainer">
 
 </div>
 
 <script type="text/babel">
-   var Tile = React.createClass({
-      render: function(){
-         return(
-         <div className="content">
-            <h1>{this.props.trend}</h1>
-            <a href={this.props.id}><img className="tile-image" src={this.props.picture} /></a>
-         </div>)
-         ;
-      }
-   });
-   ReactDOM.render(<div>
-                      <% @trends.each do |trend| %>
-                      <Tile id="trends/<%= trend.id %>" trend="<%= trend.name %>" picture="<%= trend.thumbnail %>"/>
-                      <% end %>
-                   </div>, document.getElementById('grid'))
+
+  var Tile = React.createClass({
+    render: function(){
+       return(
+       <div className="content">
+          <h1>{this.props.trend}</h1>
+          <a href={this.props.id}><img className="tile-image" src={this.props.picture} /></a>
+       </div>)
+       ;
+    }
+  });
+
+  ReactDOM.render(<div id="grid">
+                    <% @trends.each do |trend| %>
+                    <Tile id="trends/<%= trend.id %>" trend="<%= trend.name %>" picture="<%= trend.thumbnail %>"/>
+                    <% end %>
+                 </div>, document.getElementById('reactContainer'))
 </script>
