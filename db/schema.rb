@@ -15,6 +15,12 @@ ActiveRecord::Schema.define(version: 20160926192712) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bings", force: :cascade do |t|
+    t.text     "trend_pic"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "images", force: :cascade do |t|
     t.string   "url"
     t.integer  "trend_id"
@@ -41,6 +47,12 @@ ActiveRecord::Schema.define(version: 20160926192712) do
   create_table "tweets", force: :cascade do |t|
     t.string   "tweet"
     t.integer  "trend_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "twitter_trends", force: :cascade do |t|
+    t.string   "trend"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
