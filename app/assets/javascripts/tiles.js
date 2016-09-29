@@ -27,7 +27,7 @@ var $btns = $('.btn').click(function() {
   setInterval(function() {
   console.log("WEeeeeeEEEE!!")
 
-    $.ajax({ url: "/trends/api" })
+//     $.ajax({ url: "/trends/api" })
 
     $.ajax({ url: '/' })
     .done(function(response) {
