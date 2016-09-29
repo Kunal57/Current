@@ -1,57 +1,45 @@
 <button class="shuffle-button" type="button">Shuffle</button>
 
+<h2>Filter</h2>
+<button class="active btn" id="all">Show All</button>
+<button class="btn" id="five">Top 5</button>
+<button class="btn" id="ten">Top 10</button>
+<button class="btn" id="fifteen">Top 15</button>
 
-<div id="reactContainer">
-
+<div id="grid">
 </div>
-
 <script type="text/babel">
-
-  var BigTile = React.createClass({
-    render: function(){
-       return(
-       <div className="BigTrend content">
-          <h1>{this.props.trend}</h1>
-          <a href={this.props.id}><img className="tile-image" src={this.props.picture} /></a>
-       </div>)
-       ;
-    }
-  });  
-
-  var MediumTile = React.createClass({
-    render: function(){
-       return(
-       <div className="MediumTrend content">
-          <h1>{this.props.trend}</h1>
-          <a href={this.props.id}><img className="tile-image" src={this.props.picture} /></a>
-       </div>)
-       ;
-    }
-  });  
-
-  var SmallTile = React.createClass({
-    render: function(){
-       return(
-       <div className="SmallTrend content">
-          <h1>{this.props.trend}</h1>
-          <a href={this.props.id}><img className="tile-image" src={this.props.picture} /></a>
-       </div>)
-       ;
-    }
-  });
-
-  ReactDOM.render(<div id="grid">
-                    <% @big_trends.each do |trend| %>
-                    <BigTile id="trends/<%= trend.id %>" trend="<%= trend.name %>" picture="<%= trend.thumbnail %>"/>
-                    <% end %>                    
-
-                    <% @medium_trends.each do |trend| %>
-                    <MediumTile id="trends/<%= trend.id %>" trend="<%= trend.name %>" picture="<%= trend.thumbnail %>"/>
-                    <% end %>                    
-
-                    <% @small_trends.each do |trend| %>
-                    <SmallTile id="trends/<%= trend.id %>" trend="<%= trend.name %>" picture="<%= trend.thumbnail %>"/>
-                    <% end %>
-
-                  </div>, document.getElementById('reactContainer'))
+   var Tile = React.createClass({
+      render: function(){
+         return(
+         <div className="element-item content">
+            <h1 className="title-item">{this.props.trend}</h1>
+            <h1 className="rank-item">{this.props.rank}</h1>
+            <a href={this.props.id}><img className="element-item" src={this.props.picture} /></a>
+         </div>)
+         ;
+      }
+   });
+   ReactDOM.render(<div id="parent">
+                    <div className="five ten fifteen"><Tile id="trends/<%= @trends[0].id %>" trend="<%= @trends[0].name %>" rank="<%= @trends[0].rank %>" picture="<%= @trends[0].thumbnail %>"/></div>
+                    <div className="five ten"><Tile id="trends/<%= @trends[1].id %>" trend="<%= @trends[1].name %>" rank="<%= @trends[1].rank %>" picture="<%= @trends[1].thumbnail %>"/></div>
+                    <div className="five ten fifteen"><Tile id="trends/<%= @trends[2].id %>" trend="<%= @trends[2].name %>" rank="<%= @trends[2].rank %>" picture="<%= @trends[2].thumbnail %>"/></div>
+                    <div className="five ten fifteen"><Tile id="trends/<%= @trends[3].id %>" trend="<%= @trends[3].name %>" rank="<%= @trends[3].rank %>" picture="<%= @trends[3].thumbnail %>"/></div>
+                    <div className="five ten fifteen"><Tile id="trends/<%= @trends[4].id %>" trend="<%= @trends[4].name %>" rank="<%= @trends[4].rank %>" picture="<%= @trends[4].thumbnail %>"/></div>
+                    <div className="ten fifteen"><Tile id="trends/<%= @trends[5].id %>" trend="<%= @trends[5].name %>" rank="<%= @trends[5].rank %>" picture="<%= @trends[5].thumbnail %>"/></div>
+                    <div className="ten fifteen"><Tile id="trends/<%= @trends[6].id %>" trend="<%= @trends[6].name %>" rank="<%= @trends[6].rank %>" picture="<%= @trends[6].thumbnail %>"/></div>
+                    <div className="ten fifteen"><Tile id="trends/<%= @trends[7].id %>" trend="<%= @trends[7].name %>" rank="<%= @trends[7].rank %>" picture="<%= @trends[7].thumbnail %>"/></div>
+                    <div className="ten fifteen"><Tile id="trends/<%= @trends[8].id %>" trend="<%= @trends[8].name %>" rank="<%= @trends[8].rank %>" picture="<%= @trends[8].thumbnail %>"/></div>
+                    <div className="ten fifteen"><Tile id="trends/<%= @trends[9].id %>" trend="<%= @trends[9].name %>" rank="<%= @trends[9].rank %>" picture="<%= @trends[9].thumbnail %>"/></div>
+                    <div className="fifteen"><Tile id="trends/<%= @trends[10].id %>" trend="<%= @trends[10].name %>" rank="<%= @trends[10].rank %>" picture="<%= @trends[10].thumbnail %>"/></div>
+                    <div className="fifteen"><Tile id="trends/<%= @trends[11].id %>" trend="<%= @trends[11].name %>" rank="<%= @trends[11].rank %>" picture="<%= @trends[11].thumbnail %>"/></div>
+                    <div className="fifteen"><Tile id="trends/<%= @trends[12].id %>" trend="<%= @trends[12].name %>" rank="<%= @trends[12].rank %>" picture="<%= @trends[12].thumbnail %>"/></div>
+                    <div className="fifteen"><Tile id="trends/<%= @trends[13].id %>" trend="<%= @trends[13].name %>" rank="<%= @trends[13].rank %>" picture="<%= @trends[13].thumbnail %>"/></div>
+                    <div className="fifteen"><Tile id="trends/<%= @trends[14].id %>" trend="<%= @trends[14].name %>" rank="<%= @trends[14].rank %>" picture="<%= @trends[14].thumbnail %>"/></div>
+                    <Tile id="trends/<%= @trends[15].id %>" trend="<%= @trends[15].name %>" rank="<%= @trends[15].rank %>" picture="<%= @trends[15].thumbnail %>"/>
+                    <Tile id="trends/<%= @trends[16].id %>" trend="<%= @trends[16].name %>" rank="<%= @trends[16].rank %>" picture="<%= @trends[16].thumbnail %>"/>
+                    <Tile id="trends/<%= @trends[17].id %>" trend="<%= @trends[17].name %>" rank="<%= @trends[17].rank %>" picture="<%= @trends[17].thumbnail %>"/>
+                    <Tile id="trends/<%= @trends[18].id %>" trend="<%= @trends[18].name %>" rank="<%= @trends[18].rank %>" picture="<%= @trends[18].thumbnail %>"/>
+                    <Tile id="trends/<%= @trends[19].id %>" trend="<%= @trends[19].name %>" rank="<%= @trends[19].rank %>" picture="<%= @trends[19].thumbnail %>"/>
+                   </div>, document.getElementById('grid'))
 </script>
