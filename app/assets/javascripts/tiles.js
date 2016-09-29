@@ -1,14 +1,14 @@
 $(document).on("turbolinks:load", function() {
 
     // Shuffle
-    $('.shuffle-button').on( 'click', function() {
-    var $container = $('#grid')
-    $container.isotope({
-      itemSelector: '.content',
-      layoutMode: 'masonry'
-    });
-    $container.isotope('shuffle');
-    });
+    // $('.shuffle-button').on( 'click', function() {
+    // var $container = $('#grid')
+    // $container.isotope({
+    //   itemSelector: '.content',
+    //   layoutMode: 'masonry'
+    // });
+    // $container.isotope('shuffle');
+    // });
 
     // Filtering
 var $btns = $('.btn').click(function() {
