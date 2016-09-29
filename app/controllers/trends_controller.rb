@@ -2,7 +2,30 @@ class TrendsController < ApplicationController
   include ApiHelper
 
   def index
-    @trends = Trend.order('created_at DESC').limit(50).reverse
+    if request.xhr?
+      # Get Trends from specific date & time (Ex: '2016-09-27 19:14:05')
+      p params
+      @trends = []
+      counter = 20
+      until counter < 1
+        @trends << Trend.where("created_at > ?", params["date"]).find_by(rank: counter)
+        counter -= 1
+      end
+      @trends = @trends.reverse
+      render "trends/index", layout: false
+    else
+      # Get Trends from current date & time (LIVE)
+      @trends = []
+      counter = 20
+      until counter < 1
+        @trends << Trend.order('created_at DESC').find_by(rank: counter)
+        counter -= 1
+      end
+      @trends = @trends.reverse
+      @big_trends = @trends[0..2]
+      @medium_trends = @trends[3..9]
+      @small_trends = @trends[10..19]
+    end
   end
 
   def show
