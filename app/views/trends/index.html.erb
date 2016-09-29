@@ -7,10 +7,32 @@
 
 <script type="text/babel">
 
-  var Tile = React.createClass({
+  var BigTile = React.createClass({
     render: function(){
        return(
-       <div className="content">
+       <div className="BigTrend content">
+          <h1>{this.props.trend}</h1>
+          <a href={this.props.id}><img className="tile-image" src={this.props.picture} /></a>
+       </div>)
+       ;
+    }
+  });  
+
+  var MediumTile = React.createClass({
+    render: function(){
+       return(
+       <div className="MediumTrend content">
+          <h1>{this.props.trend}</h1>
+          <a href={this.props.id}><img className="tile-image" src={this.props.picture} /></a>
+       </div>)
+       ;
+    }
+  });  
+
+  var SmallTile = React.createClass({
+    render: function(){
+       return(
+       <div className="SmallTrend content">
           <h1>{this.props.trend}</h1>
           <a href={this.props.id}><img className="tile-image" src={this.props.picture} /></a>
        </div>)
@@ -19,8 +41,17 @@
   });
 
   ReactDOM.render(<div id="grid">
-                    <% @trends.each do |trend| %>
-                    <Tile id="trends/<%= trend.id %>" trend="<%= trend.name %>" picture="<%= trend.thumbnail %>"/>
+                    <% @big_trends.each do |trend| %>
+                    <BigTile id="trends/<%= trend.id %>" trend="<%= trend.name %>" picture="<%= trend.thumbnail %>"/>
+                    <% end %>                    
+
+                    <% @medium_trends.each do |trend| %>
+                    <MediumTile id="trends/<%= trend.id %>" trend="<%= trend.name %>" picture="<%= trend.thumbnail %>"/>
+                    <% end %>                    
+
+                    <% @small_trends.each do |trend| %>
+                    <SmallTile id="trends/<%= trend.id %>" trend="<%= trend.name %>" picture="<%= trend.thumbnail %>"/>
                     <% end %>
-                 </div>, document.getElementById('reactContainer'))
+
+                  </div>, document.getElementById('reactContainer'))
 </script>
