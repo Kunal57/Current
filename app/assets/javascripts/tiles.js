@@ -20,5 +20,5 @@ $(document).on("turbolinks:load", function() {
     .done(function(response) {
       $("#grid").html(response);
     });
-  }, 60000);
+  }, 120000);
 })
