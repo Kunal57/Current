@@ -85,6 +85,7 @@ body {
   font-size: 26px;
   font-weight: normal;
   color: white;
+  background-color: transparent;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -98,6 +99,7 @@ body {
   font-size: 18px;
   font-weight: normal;
   color: white;
+  background-color: transparent;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -138,22 +140,11 @@ body {
   text-align: center;
   border-style: solid;
   border-radius: 20%;
-  border-color: black;
+
   float: left;
   width: 200px;
   height: 200px;
 }
-
-/*.content {
-  font-size: 50%;
-  text-align: center;
-  border-style: solid;
-  border-radius: 20%;
-  border-color: black;
-  float: left;
-  width: 200px;
-  height: 200px;
-}*/
 
 * {
   background-color: white;
@@ -187,7 +178,7 @@ body {
 
 .trend_name {
   font-size: 175%;
-} 
+}
 
 #trend-title {
   padding-left: 2em;
