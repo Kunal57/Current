@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Current</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
-    <!-- <script src="build/react.js"></script> -->
-    <!-- <script src="build/react-dom.js"></script> -->
-    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <!--   <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.js"></script> -->
-      <!-- <script src="jquery.colorbox-min.js"></script> -->
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   </head>
-  </head>
-    <body>
-
-      <div id="container">
-        <h1 class="center-align" id="title"><a href="/">Current</a></h1>
-        <%= yield %>
-      </div>
-    </body>
+  <body>
+    <title>Current</title>
+    <div id="container">
+      <h1 class="center-align" id="title"><a href="/">Current</a></h1>
+      <%= yield %>
+    </div>
+  </body>
 </html>
