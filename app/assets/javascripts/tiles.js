@@ -1,6 +1,6 @@
 $(document).on("turbolinks:load", function() {
 
-
+    // Shuffle
     $('.shuffle-button').on( 'click', function() {
     var $container = $('#grid')
     $container.isotope({
@@ -9,6 +9,19 @@ $(document).on("turbolinks:load", function() {
     });
     $container.isotope('shuffle');
     });
+
+    // Filtering
+var $btns = $('.btn').click(function() {
+    if (this.id == 'all') {
+      $('#parent > div').fadeIn(1000);
+    } else {
+      var $el = $('.' + this.id).fadeIn(1000);
+      $('#parent > div').not($el).hide(1000);
+    }
+    $btns.removeClass('active');
+    $(this).addClass('active');
+  })
+
 
 
   setInterval(function() {
@@ -29,22 +42,11 @@ $(document).on("turbolinks:load", function() {
       itemSelector: '.content',
       layoutMode: 'masonry'
     });
+    // var times = 10;
+    // for(var i=0; i < times; i++){}
+    // doSomething();
     $container.isotope('shuffle');
     });
 
   }, 60000);
 })
-
-// var ready;
-
-// ready = function() {
-
-
-// };
-
-// $(document).ready(ready);
-// $(document).on("page:load", ready);
-
-// $(document).on("turbolinks:load", function() {
-//   alert("I AM WORKING!#$%!@#$%^@")
-// });
