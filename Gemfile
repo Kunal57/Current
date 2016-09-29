@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 
 ####### Added GEMs #######
 gem 'twitter'
+# gem 'materialize-sass'
 
 ##########################
 

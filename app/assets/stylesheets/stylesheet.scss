@@ -106,7 +106,7 @@ body {
   content: '';
   display: block;
   clear: both;
-}
+}*/
 
 
 #container {
@@ -138,7 +138,7 @@ body {
   float: left;
   width: 200px;
   height: 200px;
-}*/
+}
 
 /*.content {
   font-size: 50%;
@@ -149,7 +149,7 @@ body {
   float: left;
   width: 200px;
   height: 200px;
-}
+}*/
 
 * {
   background-color: white;
@@ -157,26 +157,26 @@ body {
 
 #container {
   width: 100%;
-  background-color: #e3f2fd;*/
+  background-color: #e3f2fd;
   /*border-style: solid;*/
   /*border-bottom: thick dotted blue;*/
-/*}
+}
 
 .center-align {
   background-color: #e3f2fd;
-}*/
-/*#title {
+}
+#title {
   text-align: center;
-}*/
+}
 
-/*#grid {
+#grid {
   width: 90%;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 20%;
-}*/
+}
 
-/*.tile-image {
+.tile-image {
   height: 180px;
   width: 180px;
 }
@@ -192,26 +192,26 @@ body {
 .col {
   background-color: #e3f2fd;
 }
-*/
-/*#embedded_tweet {
+
+#embedded_tweet {
  display: block;
- margin: auto;*/
+ margin: auto;
 /* width: 40%;*/
-/* width: 600px;
+ width: 600px;
  height: 325px;
  overflow: scroll;
- background-color: #e3f2fd;*/
+ background-color: #e3f2fd;
  /*float: left;
  padding-left: 8em;
  padding-bottom: 2em;*/
-/*}*/
+}
 
-/*#tweet-box {
+#tweet-box {
  float: left;
  padding-left: 8em;
  padding-bottom: 2em;
  padding-top: 5em;
-}*/
+}
 
 /*#articles {
  width: 600px;
@@ -232,7 +232,7 @@ body {
  padding-top: 5em;*/
 /*}*/
 
-/*#news-container {
+#news-container {
  display: block;
  margin: auto;
  width: 600px;
@@ -242,9 +242,9 @@ body {
 }
 
 .btn {
- width: 100%;*/
+ width: 100%;
  /*background-color: #e3f2fd;*/
-/*}
+}
 
 #content-img {
   background-color: #e3f2fd;
@@ -281,6 +281,6 @@ html {
 }
 
 .tweetbox {
-  float: right;*/
+  float: right;
   /*background-color: #e3f2fd;*/
-/*}*/
+}
