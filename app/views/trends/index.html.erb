@@ -6,18 +6,9 @@
 <button class="btn" id="ten">Top 10</button>
 <button class="btn" id="fifteen">Top 15</button>
 <br>
-<!-- <div id="grid">
 
-
-         <div className="element-item content">
-            <h1 className="title-item">{this.props.trend}</h1>
-            <h1 className="rank-item">{this.props.rank}</h1>
-            <a href={this.props.id}><img className="element-item" src={this.props.picture} /></a>
-         </div> -->
 <div id="grid">
-<% @trends.each do |trend| %>
-  <div class="five ten element-item content"><%= trend.name %><a href=" trends/<%= trend.id %> "><img src="<%= trend.thumbnail %>"></a></div>
-<% end %>
+  <%= render "trends/tile" %>
 </div>
 
 <!-- <div id="parent">
