@@ -85,6 +85,7 @@ body {
   font-size: 26px;
   font-weight: normal;
   color: white;
+  background-color: transparent;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -98,6 +99,7 @@ body {
   font-size: 18px;
   font-weight: normal;
   color: white;
+  background-color: transparent;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -110,7 +112,7 @@ body {
   content: '';
   display: block;
   clear: both;
-}
+}*/
 
 
 #container {
@@ -138,8 +140,142 @@ body {
   text-align: center;
   border-style: solid;
   border-radius: 20%;
-  border-color: black;
+
   float: left;
   width: 200px;
   height: 200px;
+}
+
+* {
+  background-color: white;
+}
+
+#container {
+  width: 100%;
+  background-color: #e3f2fd;
+  /*border-style: solid;*/
+  /*border-bottom: thick dotted blue;*/
+}
+
+.center-align {
+  background-color: #e3f2fd;
+}
+#title {
+  text-align: center;
+}
+
+#grid {
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20%;
+}
+
+.tile-image {
+  height: 180px;
+  width: 180px;
+}
+
+.trend_name {
+  font-size: 175%;
+}
+
+#trend-title {
+  padding-left: 2em;
+}
+
+.col {
+  background-color: #e3f2fd;
+}
+
+#embedded_tweet {
+ display: block;
+ margin: auto;
+/* width: 40%;*/
+ width: 600px;
+ height: 325px;
+ overflow: scroll;
+ background-color: #e3f2fd;
+ /*float: left;
+ padding-left: 8em;
+ padding-bottom: 2em;*/
+}
+
+#tweet-box {
+ float: left;
+ padding-left: 8em;
+ padding-bottom: 2em;
+ padding-top: 5em;
+}
+
+/*#articles {
+ width: 600px;
+ height: 300px;
+ overflow: scroll;
+ float: right;
+ padding-right: 8em;
+ padding-bottom: 2em;
+ padding-top: 5em;
 }*/
+
+/*#articles {
+ width: 600px;
+ height: 300px;*/
+ /*float: right;
+ padding-right: 8em;
+ padding-bottom: 2em;
+ padding-top: 5em;*/
+/*}*/
+
+#news-container {
+ display: block;
+ margin: auto;
+ width: 600px;
+ height: 300px;
+ overflow: scroll;
+ background-color: #e3f2fd;
+}
+
+.btn {
+ width: 100%;
+ /*background-color: #e3f2fd;*/
+}
+
+#content-img {
+  background-color: #e3f2fd;
+}
+
+.modal {
+ width: 100em;
+ height: 100em;
+}
+
+.iframe {
+ width: 100%;
+ height: 30em;
+}
+
+.row {
+  background-color: #e3f2fd;
+}
+
+.xl {
+  background-color: #e3f2fd;
+}
+
+#trend-title {
+  background-color: #e3f2fd;
+}
+
+html {
+  background-color: #e3f2fd;
+}
+
+.carousel {
+  background-color: #e3f2fd;
+}
+
+.tweetbox {
+  float: right;
+  /*background-color: #e3f2fd;*/
+}
