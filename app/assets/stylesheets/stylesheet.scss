@@ -5,6 +5,8 @@
 
 .grid {
   padding: 0%;
+  width: 100%;
+  right: 0px;
 }
 
 .nav-wrapper {
@@ -27,7 +29,10 @@ body {
 }
 
 .btn-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin: auto;
+  padding-left: 34%;
+  padding-top: 10px;
 }
 
 .btn-group:after {
@@ -122,7 +127,7 @@ body {
   text-align: center;
   border-style: solid;
   border-radius: 20%;
-
+  padding-left: 35%;
   float: left;
   width: 200px;
   height: 200px;
@@ -140,6 +145,11 @@ body {
 }
 #title {
   text-align: center;
+}
+
+#parent {
+  margin-left: 7.5%;
+  width: 100%;
 }
 
 #grid {
@@ -250,7 +260,7 @@ html {
 }
 
 .tweetbox {
- width: 52.5%;
+  width: 52.5%;
   display: block;
   margin-left: auto;
   margin-right: auto;
