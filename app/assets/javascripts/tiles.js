@@ -23,10 +23,8 @@ $(document).on("turbolinks:load", function() {
     })
 
   setInterval(function() {
-  // console.log("WEeeeeeEEEE!!")
 
-    // API DANGER!!!!!!!
-    // $.ajax({ url: "/trends/api" })
+//     $.ajax({ url: "/trends/api" })
 
     $.ajax({ url: '/' })
     .done(function(response) {
