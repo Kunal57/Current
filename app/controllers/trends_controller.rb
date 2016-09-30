@@ -36,6 +36,7 @@ class TrendsController < ApplicationController
     end
 
     @trends_array = @trends_array[0..23]
+    @trends_array[17] = "SpaceX"
     # Create Trend Objects and populate them with the Trend and Thumbnail
     bing
     counter = 1
@@ -46,10 +47,15 @@ class TrendsController < ApplicationController
       puts image_result.first.to_json
         if image_result.first == nil
           trend_object = Trend.create(name: trend, thumbnail: "https://avatars0.githubusercontent.com/u/55462?v=3&s=400", rank: counter)
-          Image.create(url: "http://static.businessinsider.com/image/54209a4169bedd0c326cdbab/image.jpg", trend_id: trend_object.id)
+          Image.create(url: "http://static.
+https://pbs.twimg.com/profile_images/715912004914044928/l4oNQ_pi.jpg", trend_id: trend_object.id)
           Image.create(url: "https://a1-images.myspacecdn.com/images02/149/36f8c7c493724afe9e7f06d62af006a7/300x300.jpg", trend_id: trend_object.id)
           Image.create(url: "https://pbs.twimg.com/profile_images/542694723278757888/2tdeBa2A.jpeg", trend_id: trend_object.id)
           Image.create(url: "https://static1.squarespace.com/static/53e4e1bbe4b08bfde27b5214/53e5176ae4b0990b0972dd46/576044891bbee08251f0ad26/1466095802553/DSC01810.jpg?format=1500w", trend_id: trend_object.id)
+          Image.create(url: "https://scontent.ford1-1.fna.fbcdn.net/v/t1.0-1/c1.0.320.320/p320x320/13769440_10209103851967275_5266836440395994669_n.jpg?oh=391d625817d09db5bd92186b95b0d073&oe=587CE51F", trend_object.id)
+          Image.create(url: "https://mir-s3-cdn-cf.behance.net/user/276/6303587.53a222160ddca.jpg", trend_object.id)
+          Image.create(url: "https://i.ytimg.com/vi/4q0rjxpzBnE/hqdefault.jpg", trend_object.id)
+
         else
           trend_object = Trend.create(name: trend, thumbnail: image_result.first.thumbnail.media_url, rank: counter)
           image_result.each do |image|
