@@ -47,8 +47,7 @@ class TrendsController < ApplicationController
       puts image_result.first.to_json
         if image_result.first == nil
           trend_object = Trend.create(name: trend, thumbnail: "https://avatars0.githubusercontent.com/u/55462?v=3&s=400", rank: counter)
-          Image.create(url: "http://static.
-https://pbs.twimg.com/profile_images/715912004914044928/l4oNQ_pi.jpg", trend_id: trend_object.id)
+          Image.create(url: "https://pbs.twimg.com/profile_images/715912004914044928/l4oNQ_pi.jpg", trend_id: trend_object.id)
           Image.create(url: "https://a1-images.myspacecdn.com/images02/149/36f8c7c493724afe9e7f06d62af006a7/300x300.jpg", trend_id: trend_object.id)
           Image.create(url: "https://pbs.twimg.com/profile_images/542694723278757888/2tdeBa2A.jpeg", trend_id: trend_object.id)
           Image.create(url: "https://static1.squarespace.com/static/53e4e1bbe4b08bfde27b5214/53e5176ae4b0990b0972dd46/576044891bbee08251f0ad26/1466095802553/DSC01810.jpg?format=1500w", trend_id: trend_object.id)
