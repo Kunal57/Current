@@ -24,7 +24,7 @@ $(document).on("turbolinks:load", function() {
 
   setInterval(function() {
 
-    $.ajax({ url: "/trends/api" })
+//     $.ajax({ url: "/trends/api" })
 
     $.ajax({ url: '/' })
     .done(function(response) {
