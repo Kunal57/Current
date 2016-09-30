@@ -4,7 +4,7 @@ class TrendsController < ApplicationController
   def index
     if request.xhr?
       @trends = []
-      counter = 20
+      counter = 24
       until counter < 1
         @trends << Trend.order('created_at DESC').find_by(rank: counter)
         counter -= 1
@@ -14,7 +14,7 @@ class TrendsController < ApplicationController
     else
       # Get Trends from current date & time (LIVE)
       @trends = []
-      counter = 20
+      counter = 24
       until counter < 1
         @trends << Trend.order('created_at DESC').find_by(rank: counter)
         counter -= 1
@@ -35,6 +35,7 @@ class TrendsController < ApplicationController
       @trends_array << trend.name
     end
 
+    @trends_array = @trends_array[0..23]
     # Create Trend Objects and populate them with the Trend and Thumbnail
     bing
     counter = 1
